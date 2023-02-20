@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# v 1.3.1
+# v 1.3.2
 #
 # Usage: ora_hot #<DBTARGET> <SCRIPT_DIR>
 #
@@ -41,7 +41,8 @@ fi
 DBTARGET=$(echo $NB_ORA_PC_SCHED | awk -F_ '{print $1}')
 echo "DBTARGET:$DBTARGET" >> $TST_LOG
 
-if [[ $NB_ORA_PC_SCHED =~ _AL_ ]]; then
+SchedOut=""
+if [[ $NB_ORA_PC_SCHED =~ _AL ]]; then
 # Condition can be changed to =~ _AL
    echo "BK type: AL"  >> $TST_LOG
   SCRT_TYPE=$cCallTypeAL
@@ -49,16 +50,16 @@ if [[ $NB_ORA_PC_SCHED =~ _AL_ ]]; then
 elif [[ $NB_ORA_PC_SCHED =~ diff ]]; then
 	echo "BK type: diff"  >> $TST_LOG
   SCRT_TYPE=$cCallTypeDBdiff
-	SchedOut="_diff"
+#	SchedOut="_diff"
 elif [[ $NB_ORA_PC_SCHED =~ full ]]; then
 	echo "BK type: full"  >> $TST_LOG
   SCRT_TYPE=$cCallTypeDBfull
-	SchedOut="_full"
+#	SchedOut="_full"
 else
 # Can be changed!
   echo "BK type: not AL"  >> $TST_LOG
   SCRT_TYPE=$cCallTypeDB
-	SchedOut=""
+#	SchedOut=""
 fi
 
 #echo "DIR:$DIR" >> $TST_LOG
