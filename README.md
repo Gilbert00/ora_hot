@@ -38,7 +38,7 @@ NB_ORA_POLICY
 NB_ORA_PC_SCHED
 NB_ORA_FULL
 NB_ORA_INCR
-NB_ORA_CINC
+NB_ORA_CINC  
 
 The program works with one policy.
 Starting Schedulers must have the suffix
