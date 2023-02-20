@@ -1,0 +1,4 @@
+# Version 20220429edkdb
+RRKRMA   RRKRMA     2	1	PP  	011	TEST  TEST	TEST /u00/app/oracle/product/19/db
+RRKRMATR RRKRMATR   2	1	PP  	011	TEST  TEST	TEST /u00/app/oracle/product/19/db
+none  TEST  TEST TEST	TEST	TEST	rman  TEST	TEST 
