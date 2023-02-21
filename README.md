@@ -59,7 +59,7 @@ ShortClientName - in lowercase !
 Examples:
 rrkrma-or5001lv	
 rrkrma-or5001lv_AL
-
+ 
  
 
  	 
